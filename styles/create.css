@@ -1,0 +1,13 @@
+.create__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.create__form {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
