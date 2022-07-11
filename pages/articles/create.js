@@ -12,7 +12,8 @@ const CreateArticle = () => {
   const onSubmit = (data) =>
     axios
       .post(`${API}/articles`, { ...data, date: new Date() })
-      .then(() => goToView());
+      .then(() => goToView())
+      .catch(() => window.alert("Failed to create article"));
 
   return (
     <>

@@ -13,14 +13,15 @@ const useArticles = () => {
   return {
     articles: data,
     isLoading: !error && !data,
+    isError: error,
   };
 };
 
 const ViewArticles = () => {
-  const { articles, isLoading } = useArticles();
+  const { articles, isLoading, isError } = useArticles();
   const router = useRouter();
   const goToCreate = () => router.push("/articles/create");
-
+  if (isError) return <p className="error">Failed to load articles</p>;
   return (
     <>
       <Button

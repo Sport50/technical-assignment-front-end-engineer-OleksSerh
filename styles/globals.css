@@ -20,3 +20,7 @@ a {
   top: 16px;
   right: 16px;
 }
+
+.error {
+  text-align: center;
+}
